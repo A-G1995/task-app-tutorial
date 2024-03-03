@@ -1,6 +1,5 @@
 package com.example.task_app_be_mediumcom.data.model
 
-import jakarta.annotation.Priority
 import java.time.LocalDateTime
 
 data class TaskDTO(
@@ -10,4 +9,4 @@ data class TaskDTO(
     val isTaskOpen: Boolean,
     val createdOn: LocalDateTime,
     val priority: Priority
-    )
+)
