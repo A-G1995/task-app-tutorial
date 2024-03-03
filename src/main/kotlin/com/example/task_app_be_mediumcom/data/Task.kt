@@ -1,6 +1,6 @@
 package com.example.task_app_be_mediumcom.data
 
-import com.example.task_app_be_mediumcom.data.model.Prority
+import com.example.task_app_be_mediumcom.data.model.Priority
 import jakarta.persistence.*
 import jakarta.validation.constraints.NotBlank
 import java.time.LocalDateTime
@@ -18,7 +18,7 @@ class Task {
     val id: Long = 0
 
     @NotBlank
-    @Column(name = "description", nullable = false, unique = false)
+    @Column(name = "description", nullable = false, unique = true)
     var description: String = ""
 
     @Column(name = "is_reminder_set", nullable = false)
@@ -32,7 +32,7 @@ class Task {
 
     @NotBlank
     @Enumerated(EnumType.STRING)
-    var priority: Prority = Prority.LOW
+    var priority: Priority = Priority.LOW
 
 
 }
